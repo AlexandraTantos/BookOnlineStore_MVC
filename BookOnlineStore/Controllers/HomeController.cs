@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using BookOnlineStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookOnlineStore.Controllers
@@ -26,7 +25,7 @@ namespace BookOnlineStore.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new Book.Models.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
